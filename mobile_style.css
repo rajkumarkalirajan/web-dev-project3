@@ -1,6 +1,6 @@
 @media (min-width: 600px) {
 body {
-		background-image: url('../media/repeating.jpg)');
+		background-image: url('./media/repeating.jpg)');
 	}
 }
 @media (min-width: 768px) {
