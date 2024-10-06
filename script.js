@@ -2,7 +2,7 @@ function initMap() {
     alert('It works!');
 
     var el = document.getElementById('map');
-    var myLocation = new google.maps.LatLng(55.750471, 37.622532);
+    var myLocation = new google.maps.LatLng(55.755274, 37.616886);
     var mapOptions = {
         center: myLocation,
         zoom: 18,
@@ -15,7 +15,7 @@ function initMap() {
         position: myLocation,
         map: myMap,
         animation: google.maps.Animation.BOUNCE,
-        icon:'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Kremlin%2C_Moscow%2C_Russia.jpg/300px-Kremlin%2C_Moscow%2C_Russia.jpg'
+        icon:https://maps.app.goo.gl/AoL9Jm2hudTEgCPo7
     });
 
     var contentString = '<h1>Moscow Kremlin</h1><p>Kremlin is a fortified complex in Moscow</p>';
@@ -41,4 +41,3 @@ function initMap() {
 		startBounce(marker);
 }
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMIF-BpX660SBK3-Vw909f7AEvTAIH8rI&callback=initMap" async defer></script>
