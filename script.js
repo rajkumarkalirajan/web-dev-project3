@@ -15,7 +15,7 @@ var marker = new google.maps.Marker({
 	position: myLocation,
 	map: myMap,
 	animation: google.maps.Animation.BOUNCE,
-	icon:'Kremlin.png'
+	icon:'moscow.png'
 });
 
 var contentString = '<h1>Moscow_Kremmlin</h1><p>Kremlin is a fortified complex in Moscow</p>';
