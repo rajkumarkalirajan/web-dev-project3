@@ -1,35 +1,24 @@
 function initMap() {
     alert('It works!');
 
-    var el = document.getElementById('map');
-    var myLocation = new google.maps.LatLng(55.750471, 37.622532);
-    var mapOptions = {
-        center: myLocation,
-        zoom: 18,
-        mapTypeId: google.maps.MapTypeId.SATELLITE, 
-    };
+    function initMap() {
+  const map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: 37.4239163, lng: -122.0947209},
+    zoom: 17,
+    mapId: 'DEMO_MAP_ID',
+  });
 
-    var myMap = new google.maps.Map(el, mapOptions);
+  const marker = new google.maps.marker.AdvancedMarkerElement({
+    map,
+    position: {lat: 37.4239163, lng: -122.0947209},
+  });
 
-    var marker = new google.maps.Marker({
-        position: myLocation,
-        map: myMap,
-        animation: google.maps.Animation.BOUNCE,
-        icon:'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Kremlin%2C_Moscow%2C_Russia.jpg/300px-Kremlin%2C_Moscow%2C_Russia.jpg'
-    });
-
-    var contentString = '<h1>Moscow Kremlin</h1><p>Kremlin is a fortified complex in Moscow</p>';
-    var infowindow = new google.maps.InfoWindow({ 
-        content: contentString
-    });
-
-    google.maps.event.addListener(marker, 'mouseover', function() {
-        infowindow.open(myMap, marker);
-    });
-
-    google.maps.event.addListener(marker, 'mouseout', function() {
-        infowindow.close(); 
-    });
+  marker.addListener('click', ({domEvent, latLng}) => {
+    const {target} = domEvent;
+    // Handle the click event.
+    // ...
+  });
+}
 		
 		function startBounce(marker) {
 			marker.setAnimation(google.maps.Animation.BOUNCE);
