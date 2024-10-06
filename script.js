@@ -30,6 +30,15 @@ function initMap() {
     google.maps.event.addListener(marker, 'mouseout', function() {
         infowindow.close(); 
     });
+		
+		function startBounce(marker) {
+			marker.setAnimation(google.maps.Animation.BOUNCE);
+			setTimeout(() => {
+				marker.setAnimation(null);
+				startBounce(marker);
+			}, 750);
+}
+		startBounce(marker);
 }
 
 
