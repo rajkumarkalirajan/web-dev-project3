@@ -2,7 +2,7 @@ function initMap() {
     console.log('Map initialization successful!');
 
     // Define the location for the map center
-    const myLocation = { lat: 55.750471, lng: 37.622532 };
+    const myLocation = { lat: 37.4239163, lng: -122.0947209 };
 
     // Create the map
     <gmp-map
