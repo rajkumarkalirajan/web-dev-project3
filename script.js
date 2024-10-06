@@ -5,25 +5,37 @@ function initMap() {
     const myLocation = { lat: 55.750471, lng: 37.622532 };
 
     // Create the map
-    const map = new google.maps.Map(document.getElementById('map'), {
-        center: myLocation,
-        zoom: 18,
-        mapTypeId: google.maps.MapTypeId.SATELLITE,
-    });
+    <gmp-map
+      center="43.4142989,-124.2301242"
+      zoom="4"
+      map-id="DEMO_MAP_ID"
+      style="height: 400px"
+    >
+      <gmp-advanced-marker
+        position="37.4220656,-122.0840897"
+        title="Mountain View, CA"
+      ></gmp-advanced-marker>
+      <gmp-advanced-marker
+        position="47.648994,-122.3503845"
+        title="Seattle, WA"
+      ></gmp-advanced-marker>
+    </gmp-map>
 
     // Create the marker
-    const marker = new google.maps.Marker({
-        position: myLocation,
-        map: map,
+      const marker = new AdvancedMarkerElement({
+      map,
+      position: { lat: 37.4239163, lng: -122.0947209 },
+  });
+
         animation: google.maps.Animation.DROP, // Drop animation on marker
         icon: {
-            url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Kremlin%2C_Moscow%2C_Russia.jpg/300px-Kremlin%2C_Moscow%2C_Russia.jpg',
+            url: https://maps.app.goo.gl/TxXeeowNDaqcRmrK6
             scaledSize: new google.maps.Size(40, 40), 
         },
     });
 
     // Create info window content
-    const contentString = '<h1>Moscow Kremlin</h1><p>Kremlin is a fortified complex in Moscow</p>';
+    const contentString = '<h1>Costco/p>';
     const infowindow = new google.maps.InfoWindow({
         content: contentString,
     });
