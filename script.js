@@ -1,61 +1,44 @@
 function initMap() {
-    console.log('Map initialization successful!');
+    alert('It works!');
 
-    // Define the location for the map center
-    const myLocation = { lat: 37.4239163, lng: -122.0947209 };
+    var el = document.getElementById('map');
+    var myLocation = new google.maps.LatLng(55.750471, 37.622532);
+    var mapOptions = {
+        center: myLocation,
+        zoom: 18,
+        mapTypeId: google.maps.MapTypeId.SATELLITE, 
+    };
 
-    // Create the map
-    <gmp-map
-      center="43.4142989,-124.2301242"
-      zoom="4"
-      map-id="DEMO_MAP_ID"
-      style="height: 400px"
-    >
-      <gmp-advanced-marker
-        position="37.4220656,-122.0840897"
-        title="Mountain View, CA"
-      ></gmp-advanced-marker>
-      <gmp-advanced-marker
-        position="47.648994,-122.3503845"
-        title="Seattle, WA"
-      ></gmp-advanced-marker>
-    </gmp-map>
+    var myMap = new google.maps.Map(el, mapOptions);
 
-    // Create the marker
-      const marker = new AdvancedMarkerElement({
-      map,
-      position: { lat: 37.4239163, lng: -122.0947209 },
-  });
-
-        animation: google.maps.Animation.DROP, // Drop animation on marker
-        icon: {
-            url: https://maps.app.goo.gl/TxXeeowNDaqcRmrK6
-            scaledSize: new google.maps.Size(40, 40), 
-        },
+    var marker = new google.maps.Marker({
+        position: myLocation,
+        map: myMap,
+        animation: google.maps.Animation.BOUNCE,
+        icon:'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Kremlin%2C_Moscow%2C_Russia.jpg/300px-Kremlin%2C_Moscow%2C_Russia.jpg'
     });
 
-    // Create info window content
-    const contentString = '<h1>Costco/p>';
-    const infowindow = new google.maps.InfoWindow({
-        content: contentString,
+    var contentString = '<h1>Moscow Kremlin</h1><p>Kremlin is a fortified complex in Moscow</p>';
+    var infowindow = new google.maps.InfoWindow({ 
+        content: contentString
     });
 
-    // Add mouseover and mouseout listeners for the marker
-    marker.addListener('mouseover', function () {
-        infowindow.open(map, marker);
+    google.maps.event.addListener(marker, 'mouseover', function() {
+        infowindow.open(myMap, marker);
     });
 
-    marker.addListener('mouseout', function () {
-        infowindow.close();
+    google.maps.event.addListener(marker, 'mouseout', function() {
+        infowindow.close(); 
     });
-
-    // Function to make the marker bounce
-    function startBounce(marker) {
-        marker.setAnimation(google.maps.Animation.BOUNCE);
-        setTimeout(() => {
-            marker.setAnimation(null);
-            startBounce(marker); 
-        }, 750);
-    }
-    startBounce(marker); 
+		
+		function startBounce(marker) {
+			marker.setAnimation(google.maps.Animation.BOUNCE);
+			setTimeout(() => {
+				marker.setAnimation(null);
+				startBounce(marker);
+			}, 750);
 }
+		startBounce(marker);
+}
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMIF-BpX660SBK3-Vw909f7AEvTAIH8rI&callback=initMap" async defer></script>
