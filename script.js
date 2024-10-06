@@ -1,7 +1,7 @@
 function initMap() {
     alert('It works!');
 
-   // var el = document.getElementById('map');
+   var el = document.getElementById('map');
     var myLocation = new google.maps.LatLng(55.755274, 37.616886);
     var mapOptions = {
         center: myLocation,
@@ -16,6 +16,7 @@ function initMap() {
         map: myMap,
         animation: google.maps.Animation.BOUNCE,
         icon:'https://via.placeholder.com/30',
+		});
 
     var contentString = '<h1>Moscow Kremlin</h1><p>Kremlin is a fortified complex in Moscow</p>';
     var infowindow = new google.maps.InfoWindow({ 
