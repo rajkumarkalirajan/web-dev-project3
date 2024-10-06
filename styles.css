@@ -116,7 +116,7 @@ a:hover img {
 	text-align: center;
 	border: 2px solid rgb(175, 175, 175);
 	border-radius: 6px;
-	text-shadow: #666 0.1em, 0.1em, 0.1em;
+	text-shadow: 0.1em 0.1em 0.2em #666;
 	box-shadow: 0 5px 3px rgba(0,0,0,.5);
 	position: relative;
  transition: background-color 0.2s, border-color 0.2s,top 0.2s, box-shadow 0.2s;
@@ -171,7 +171,8 @@ footer {
 	body {
 		background-image: url('../img/repeating.png')
 		}
-	}		
+	}
+}	
 	
 		
 	
