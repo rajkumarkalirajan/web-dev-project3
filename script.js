@@ -1,7 +1,7 @@
 function init() {
 alert('It works!');
 
-var el = document.getElementById('canvas');
+var el = document.getElementById('map');
 var myLocation = new google.maps.LatLng(55.750471, 37.622532)
 var mapOptions = {
 		center: myLocation,
@@ -19,7 +19,7 @@ var marker = new google.maps.Marker({
 });
 
 var contentString = '<h1>Moscow_Kremmlin</h1><p>Kremlin is a fortified complex in Moscow</p>';
-var infowindow = new google.maps.InfloWindow({
+var infowindow = new google.maps.Inflowindow({
 		content: contentString
 });
 
@@ -28,7 +28,7 @@ var infowindow = new google.maps.InfloWindow({
 		infowindow.open(myMap, marker);
 	});
 }	
-google.maps.event.adDomListener(window, 'load', init);
+google.maps.event.addDomListener(window, 'load', init);
 
 
 
