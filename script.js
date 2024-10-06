@@ -15,7 +15,7 @@ function initMap() {
         position: myLocation,
         map: myMap,
         animation: google.maps.Animation.BOUNCE,
-        icon:'https://via.placeholder.com/30',
+        icon:'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Kremlin%2C_Moscow%2C_Russia.jpg/300px-Kremlin%2C_Moscow%2C_Russia.jpg'
 		});
 
     var contentString = '<h1>Moscow Kremlin</h1><p>Kremlin is a fortified complex in Moscow</p>';
