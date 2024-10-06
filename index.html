@@ -6,6 +6,7 @@
 			<link rel="stylesheet" href="reset.css">	
 			<link rel="stylesheet" href="styles.css">	
 			<link rel="stylesheet" href="mobile_style.css">
+			<script type="text/javascript" src="slider.js" defer></script>
 </head>
 <body>		
 		<header id="main-header">
@@ -64,7 +65,14 @@
 				</audio>
 		</div>
 	</nav>
-	<footer>
+	<div class="slider">
+	 <div class="sliders">
+			<div class="slide active"><img src="image1.jpg" alt="Image 1"></div>
+			<div class="slide"><img src="image2.jpg" alt="Image 2"></div>
+	 </div>
+	 <button class="prev" onclick="changeSlide(-1)">&10094;</button>
+	 <button class="next" onclick="changeSlide(-1)">&10094;</button>
+	</div>
 			<p>&copy; 2024 Rajkumar Kalirajan. All rights reserved.</p>
 	</footer>	
 </body>
