@@ -15,7 +15,7 @@ function initMap() {
         position: myLocation,
         map: myMap,
         animation: google.maps.Animation.BOUNCE,
-        icon:'https://upload.wikimedia.org/wikipedia/commons/e/e6/Moscow_Kremlin%2C_Spasskaya_Tower_%28cropped%29.jpg'
+        icon:'icon_url.png',
     });
 
     var contentString = '<h1>Moscow Kremlin</h1><p>Kremlin is a fortified complex in Moscow</p>';
