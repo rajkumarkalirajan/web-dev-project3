@@ -1,25 +1,17 @@
 let currentSlide = 0;
-const slides = document.querySelectorAll('.slide');
 
-function showSlide(index) {
-    if (index >= slides.length) {
-        currentSlide = 0;
-    } else if (index < 0) {
-        currentSlide = slides.length - 1;
-    } else {
-        currentSlide = index;
-    }
+function changeSlide(direction) {
+	const slides = document.querySelectorAll('.slide');
+	slides[currentSlide).classList.remove("active");
 
-    slides.forEach((slide, i) => {
-        slide.style.transform = `translateX(-${currentSlide * 100}%)`;
-    });
+	currentSlide = (currentSlide + direction + slides.length) % slides.length;
+	slides[currentSlide].classList.add('active');
 }
 
-function changeSlide(n) {
-    showSlide(currentSlide + n);
-}
-
-// Automatically change slides every 5 seconds
-setInterval(() => {
-    changeSlide(1);
-}, 5000);
+document.addEventListener('keydown', (event)=> {
+  if (event.key == 'ArrowLeft') {
+		changeSlide(-1);
+	} else if (event.key == 'ArrowRight') {
+		ChangeSlide(1);
+	}
+});
