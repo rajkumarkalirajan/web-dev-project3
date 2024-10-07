@@ -166,14 +166,15 @@ footer {
  
  .slided {
 	 display: flex;
-	 transtion: transform 0.5s ease;
+	 transition: transform 0.5s ease;
  }
  .slide {
 	 min-width:100%;
 	 box-sizing: border-box;
  }
  img {
-	 width: 100%;
+	 max-width: 100%;
+	 height: auto;
 	 display: block;
  }
  
