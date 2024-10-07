@@ -4,7 +4,7 @@ background: linear-gradient(to bottom,  #f3e2c7 0%,#b68d4c 13%,#e9d4b3 100%); /*
 height: 80px;
 background-color:#ff0000;
 }
-#main container, #project-name {
+#main-container, #project-name {
 	margin: 0;
 	padding: 0;
 	
@@ -74,10 +74,6 @@ a:hover img {
 	
 #audio-container {
 	margin-top: 20px;
-}
-
-#project-name {
-	font-size: 30px;
 }
 
 #main-navbar {

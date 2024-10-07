@@ -12,6 +12,6 @@ document.addEventListener('keydown', (event)=> {
   if (event.key == 'ArrowLeft') {
 		changeSlide(-1);
 	} else if (event.key == 'ArrowRight') {
-		ChangeSlide(1);
+		changeSlide(1);
 	}
 });
