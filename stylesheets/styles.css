@@ -113,12 +113,12 @@ a:hover img {
 #main-navbar ul li a {
     display: block;
     width: 6em;
-    padding: .75em 1.5em;
+    padding: .5em .5em;
     color: #fff;
     text-decoration: none;
     text-align: center;
     border: 2px solid rgb(175, 175, 175);
-    border-radius: 6px;
+    border-radius: 8px;
     text-shadow: 0.1em 0.1em 0.2em #666;
     box-shadow: 0 5px 3px rgba(0,0,0,.5);
     position: relative;
